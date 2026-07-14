@@ -132,6 +132,8 @@ Temporary Items
 # vendor/
 
 speedtest.db
+speedtest.db-shm
+speedtest.db-wal
 .idea/
 speedtest-backend
 dist/

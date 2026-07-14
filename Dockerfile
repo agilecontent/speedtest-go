@@ -15,6 +15,11 @@ WORKDIR /app
 COPY --from=build_base /build/speedtest ./
 COPY settings.toml ./
 
+LABEL org.opencontainers.image.description="Go Speedtest"
+LABEL org.opencontainers.image.source="https://github.com/agilecontent/speedtest-go"
+LABEL org.opencontainers.image.url="https://github.com/agilecontent/speedtest-go/pkgs/container/speedtest-go"
+LABEL org.opencontainers.image.vendor="Agile TV"
+
 EXPOSE 8989
 
 CMD ["./speedtest"]

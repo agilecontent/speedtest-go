@@ -7,7 +7,7 @@ No Flash, No Java, No WebSocket, No Bullshit.
 This is a very lightweight speed test implemented in JavaScript, using XMLHttpRequest and Web Workers.
 
 ## Try it
-[Take a speed test](https://speedtest.zzz.cat)
+[Take a speed test](https://speed.boxcontrol.io/)
 
 ## Compatibility
 All modern browsers are supported: IE11, latest Edge, latest Chrome, latest Firefox, latest Safari.

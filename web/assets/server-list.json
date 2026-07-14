@@ -1,0 +1,11 @@
+[
+    {
+        "id": 1,
+        "name": "Local LAN Server",
+        "server": "//localhost:8989/",
+        "dlURL": "backend/garbage",
+        "ulURL": "backend/empty",
+        "pingURL": "backend/empty",
+        "getIpURL": "backend/getIP"
+    }
+]
