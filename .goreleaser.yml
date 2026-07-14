@@ -1,13 +1,13 @@
 version: 2
-project_name: 'speedtest-go'
+project_name: 'adm-speedtest-go'
 #dist: ./out
 before:
   hooks:
     - go mod download
 builds:
   - main: ./main.go
-    id: speedtest-backend
-    binary: speedtest-backend
+    id: adm-speedtest-backend
+    binary: adm-speedtest-backend
     env:
       - CGO_ENABLED=0
     flags:
@@ -34,8 +34,8 @@ builds:
     hooks:
       post: upx -9 "{{ .Path }}"
   - main: ./main.go
-    id: speedtest-backend-darwin
-    binary: speedtest-backend
+    id: adm-speedtest-backend-darwin
+    binary: adm-speedtest-backend
     env:
       - CGO_ENABLED=0
     flags:
@@ -48,8 +48,8 @@ builds:
       - amd64
       - arm64
   - main: ./main.go
-    id: speedtest-backend-freebsd
-    binary: speedtest-backend
+    id: adm-speedtest-backend-freebsd
+    binary: adm-speedtest-backend
     env:
       - CGO_ENABLED=0
     flags:
@@ -62,8 +62,8 @@ builds:
       - amd64
       - arm64
   - main: ./main.go
-    id: speedtest-backend-noupx-windows-arm64
-    binary: speedtest-backend
+    id: adm-speedtest-backend-noupx-windows-arm64
+    binary: adm-speedtest-backend
     env:
       - CGO_ENABLED=0
     flags:
@@ -94,6 +94,6 @@ changelog:
   sort: asc
 release:
   github:
-    owner: librespeed
-    name: speedtest-go
+    owner: agilecontent
+    name: adm-speedtest-go
   disable: false

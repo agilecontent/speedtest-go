@@ -23,12 +23,12 @@ type StatsData struct {
 var (
 	key   = []byte(securecookie.GenerateRandomKey(32))
 	store = sessions.NewCookieStore(key)
-	conf = config.LoadedConfig()
+	conf  = config.LoadedConfig()
 )
 
 func init() {
 	store.Options = &sessions.Options{
-		Path:     conf.BaseURL+"/stats",
+		Path:     conf.BaseURL + "/stats",
 		MaxAge:   3600 * 1, // 1 hour
 		HttpOnly: true,
 		SameSite: http.SameSiteStrictMode,
@@ -114,7 +114,7 @@ func Stats(w http.ResponseWriter, r *http.Request) {
 const htmlTemplate = `<!DOCTYPE html>
 <html>
 <head>
-<title>LibreSpeed - Stats</title>
+<title>ADM Speedtest - Stats</title>
 <style type="text/css">
 	html,body{
 		margin:0;
@@ -159,7 +159,7 @@ const htmlTemplate = `<!DOCTYPE html>
 </style>
 </head>
 <body>
-<h1>LibreSpeed - Stats</h1>
+<h1>ADM Speedtest - Stats</h1>
 {{ if .NoPassword }}
 		Please set statistics_password in settings.toml to enable access.
 {{ else if .LoggedIn }}
